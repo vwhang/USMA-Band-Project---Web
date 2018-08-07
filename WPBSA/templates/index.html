@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>Sentiment Analysis Tool</h1>
+	
+	{% for mess in get_flashed_messages() %}
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  {{mess}}
+</div>
+	{% endfor %}
+</div>
+<div class="container">
+<div class="row">
+	<div class="col-md-4"><h2>Upload New Data</h2>
+		<img src="/static/images/data.jpg" alt="" height="300" width="300">
+		<a class="btn btn-secondary" href="{{url_for('upload_file')}}" role="button">View details »</a>
+	</div>
+	<div class="col-md-4"><h2>Calculate Score</h2>
+	<img src="/static/images/calc.png" alt="" height="300" width="300">
+		<a class="btn btn-secondary" href="{{url_for('get_score')}}" role="button">View details »</a>
+	</div>
+	<div class="col-md-4"><h2>About This Project</h2>
+	<img src="/static/images/band.jpg" alt="" height="300" width="300">
+		<a class="btn btn-secondary" href="{{url_for('about_project')}}" role="button">View details »</a>
+	</div>
+
+</div>
+</div>
+{% endblock %}
