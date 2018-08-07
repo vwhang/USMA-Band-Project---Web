@@ -1,1 +1,1 @@
-# USMA-Band-Project---Web
+# USMA-Band-Project-Web
